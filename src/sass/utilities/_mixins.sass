@@ -1,0 +1,31 @@
+// width
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+=rmin($width)
+  @media only screen and (min-width: $width+ "px")
+    @content
+
+// height
+=rh($height)
+  @media only screen and (max-height: $height + "px")
+    @content
+
+=rhmin($height)
+  @media only screen and (min-height: $height + "px")
+    @content
+
+=pcenter
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+=font($alias, $name, $style)
+  @font-face
+    font-family: $alias
+    src: url("../fonts/" + $name + '.woff2') format('woff2'), url("../fonts/" + $name + '.woff') format('woff')
+    font-weight: $style
+    font-style: normal
+    font-display: auto
