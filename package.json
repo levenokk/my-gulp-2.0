@@ -1,7 +1,7 @@
 {
-  "name": "assembly",
-  "version": "1.0.0",
-  "description": "",
+  "name": "gulp",
+  "version": "2.0.0",
+  "description": "Updated office gulp",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production gulp build",
     "test": "eslint ./src/js/app.js && eslint ./src/js/modules"
   },
-  "author": "",
+  "author": "levenokk",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.5.1",
