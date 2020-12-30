@@ -6,7 +6,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
     "optimize": "cross-env NODE_ENV=production gulp image_min",
-    "build": "cross-env NODE_ENV=production gulp build"
+    "build": "cross-env NODE_ENV=production gulp build",
+    "test": "eslint ./src/js/app.js && eslint ./src/js/modules"
   },
   "author": "",
   "license": "ISC",
@@ -55,5 +56,11 @@
     "postcss-short": "^5.0.0",
     "postcss-sorting": "^5.0.1",
     "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
   }
 }
